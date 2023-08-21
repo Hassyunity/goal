@@ -2,7 +2,14 @@ class DreamsController < ApplicationController
   before_action :set_dream, only: %i[ show edit update destroy ]
 
   # GET /dreams or /dreams.json
-  def index
+  def home
+    @dreams = Dream.all
+  end
+
+  def about
+  end
+
+  def lists
     @dreams = Dream.all
   end
 
